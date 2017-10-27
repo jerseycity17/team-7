@@ -1,1 +1,2 @@
-"# team-7" 
+# Code for Good: Team 7
+Joseph Young

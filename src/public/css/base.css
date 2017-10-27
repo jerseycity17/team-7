@@ -1,0 +1,78 @@
+html, body {
+  font-family: 'courier', sans-serif;
+  text-align: center;
+  background-color: #354555;
+
+}
+
+#colorList{
+  position: relative;
+  text-align: left;
+  left: 15%;
+  width: 60%;
+  top: 10%;
+  color: whitesmoke;
+}
+
+#colorConverter {
+  width: 15%;
+  position: relative;
+  top: 10%;
+}
+
+#wrapper {
+  background-color: #304050;
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  margin-left: -40%;
+}
+
+#title {
+  text-align: center;
+  position: relative;
+  width: 45%;
+  left: 45%;
+  top: 10%;
+  margin-left: -17%;
+  color: white;
+}
+
+#navbar {
+  text-align: center;
+  width: 60%;
+  left: 50%;
+  margin-left: -30%;
+  position: relative;
+  top: 10%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+a:hover {
+  background-color: teal;
+  color: white;
+}
+
+input[type=submit] {
+  font-family: 'courier', sans-serif;
+}
+
+#form {
+  position: relative;
+
+}
+
+#formRGB {
+  position: relative;
+  color: white;
+
+}
+
+
+
+
