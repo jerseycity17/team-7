@@ -94,15 +94,16 @@
     </div>
 
 
-    {{#each article}}
+    {{#each searchResults}}
     <div id = "blogpost">
-    <h4 style="color:#003b47;border-bottom: thin solid #003b47;"> {{this.Title}} </h4> <i style="font-size: 10px;float:right;padding-right: 1em;"> {{this.Author}}</i>
+    <h4 style="color:#003b47;border-bottom: thin solid #003b47;"> {{this.title}} </h4> <i style="font-size: 10px;float:right;padding-right: 1em;"> {{this.author}}</i>
     <br>
     <div class = "imgcontainer4"> </div>
-    <p style="padding-left: 1em;padding-top: .5em"> {{this.Description}}</p>
+    <p style="padding-left: 1em;padding-top: .5em"> {{this.abstract}}</p>
     </div>
     <br>
     {{/each}}
+
 
 
 
