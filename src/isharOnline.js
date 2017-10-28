@@ -90,7 +90,7 @@ app.get('/About', function(req, res) {
 });
 
 app.get('/Login', function(req, res) {
-    res.render('about');
+    res.render('loginpage');
 
 });
 
@@ -103,6 +103,7 @@ app.get('/Journal', function(req, res) {
     res.render('journal');
 
 });
+
 
 
 

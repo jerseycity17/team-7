@@ -15,14 +15,29 @@
         margin: 0 auto;
     }
     .jumbotron{
-        background-color: #6a85e8;
-    }
-    .jumbotron{
         background-image: url("img/background_image.jpg");
         background-position: center;
         height: 30em;
 
 
+    }
+    #wallpost{
+        width: 960px;
+        height: 160px;
+        border: 1px solid #6a85e8;
+        border-radius: 25px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .imgcontainer{
+        width: 100px;
+        height: 100px;
+        background-image: url("img/search.png");
+        margin-left: 1em;
+        margin-top: -1em;
+        float:left;
+        border: 1px solid #003b47;
+        border-radius: 5px; 
     }
     </style>
 </head>
@@ -49,26 +64,46 @@
         </div>
         <br>
     </div>
+        <h2> Sample Search </h2>
+    Sort by:
+    <form action = "" method="POST">
+    <input type="radio" name="value" value="Date">Date <br>
+    <input type="radio" name="value" value="Date">Title <br>
+    <input type="radio" name="value" value="Date">Tag <br>
+    </form>
 
-    <p style="padding-left: 97em"> Sort by: </p>
-
-     <div></div> <button class="btn btn-default" style="float:right" type="submit">Category</button>
-     <div></div> <button class="btn btn-default" style="float:right" type="submit">Category</button>
-     <div></div> <button class="btn btn-default" style="float:right" type="submit">Category</button>
-
-
-    <!--
-    {{#each article}}
-    <div id = blogpost >
-    <h3> {{this.Title}} <h3>
-    <italic>{{this.Author}}</italic>
-
-    {{this.Description}}
-
-
+    <div id = "wallpost">
+    <h4 style="color:#003b47;border-bottom: thin solid #003b47;"> Search Result 1 </h4> <i style="font-size: 10px;float:right;padding-right: 1em;"> By insert authors here</i>
+    <br>
+    <div class = "imgcontainer"> </div>
+    <p style="padding-left: 1em;padding-top: .5em">  Until very recently, it was fairly unthinkable that our own bodies pose a greater threat to health than any outside disease. Most people have never heard of one of the greatest plagues of the 21st century, because it is caused by one of the most subtle, complex reactions in the body. This plague is inflammation, which in medical terms is is the ultimate two-edged sword. </p>
     </div>
+    <br>
+    <div id = "wallpost">
+    <h4 style="color:#003b47;border-bottom: thin solid #003b47;"> Search Result 2 </h4> 
+    <br>
+    <div class = "imgcontainer"> </div>
+    <p style="padding-left: 1em;padding-top: .5em">  Homeopathy was created when Samuel Hahnemann was translating a medical treatise and became skeptical as to its claim that cinchona could cure malaria. Upon ingesting cinchona, Hahnemann experienced what he believed to be symptoms of malaria and came to believe that “like cures like.” Materials which cause symptoms in healthy people would cure them in sick people.</p>
+    </div>
+    <br>
+        <div id = "wallpost">
+    <h4 style="color:#003b47;border-bottom: thin solid #003b47;"> Search Result 3</h4> 
+    <br>
+    <div class = "imgcontainer"> </div>
+    <p style="padding-left: 1em;padding-top: .5em">  <u>William C. Bushell, PhD</u>, the Director of Research at ISHAR, has been researching mind-body phenomena for over three decades, focusing on the field of consciousness studies around the world as a biological, medical, and psychological anthropologist affiliated with Columbia, Harvard, and MIT.</p>
+    </div>
+
+
+    {{#each article}}
+    <div id = "blogpost">
+    <h4 style="color:#003b47;border-bottom: thin solid #003b47;"> {{this.Title}} </h4> <i style="font-size: 10px;float:right;padding-right: 1em;"> {{this.Author}}</i>
+    <br>
+    <div class = "imgcontainer4"> </div>
+    <p style="padding-left: 1em;padding-top: .5em"> {{this.Description}}</p>
+    </div>
+    <br>
     {{/each}}
-    -->
+
 
 
 </main>

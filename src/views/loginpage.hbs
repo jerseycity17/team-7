@@ -1,5 +1,4 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -10,17 +9,24 @@
 
 <body>
 
-		<h3> Have an Account? Enter Credentials. </h3>
+		<br><br><h3> Have an Account? Enter Credentials. </h3>
 		<form action='#'>
-     <div></div> <button class="btn btn-default" style="float:right" type="text">Username</button>
-     <div></div> <button class="btn btn-default" style="float:right" type="text">Password</button>
+  <div class="form-group">   Username:<input type="text" value="Username"> </div>
+  <div class="form-group">   Password:<input type="text" value="Password"> </div>
+     <input type="submit">
      </form>
 
 
 		<h3> Want to Register? Fill out this form. </h3>
-		<form action='#'>
-     <div></div> <button class="btn btn-default" style="float:right" type="submit">Username</button>
-     <div></div> <button class="btn btn-default" style="float:right" type="submit">Password</button>
+        <form action='#'>
+        <div class="form-group">  Username:<input type="text" name="Username" value="Username"> </div>
+        <div class="form-group">  Username:<input type="text" name="Title" value="Title"> </div>
+        <div class="form-group"> Password:<input type="text" name="Password" value="Password"> </div>
+
+        Profile Type:
+        <div class="form-group"> Scholar/Researcher <input type="radio" name="type" > </div>
+        <div class="form-group"> Volunteer <input type="radio" name="type" > </div>
+     <input type="submit">
      </form>
 
 </body>

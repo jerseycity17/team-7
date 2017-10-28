@@ -53,7 +53,17 @@
         float:left;
         border: 1px solid #003b47;
         border-radius: 5px;
-    }      
+    } 
+        .imgcontainer4{
+        width: 100px;
+        height: 100px;
+        background-image: url("img/search.png");
+        margin-left: 1em;
+        margin-top: -1em;
+        float:left;
+        border: 1px solid #003b47;
+        border-radius: 5px;
+    }        
     </style>
 </head>
 
@@ -110,18 +120,18 @@
     <div class = "imgcontainer2"> </div>
     <p style="padding-left: 1em;padding-top: .5em">  <u>William C. Bushell, PhD</u>, the Director of Research at ISHAR, has been researching mind-body phenomena for over three decades, focusing on the field of consciousness studies around the world as a biological, medical, and psychological anthropologist affiliated with Columbia, Harvard, and MIT.</p>
     </div>
-    <!--
+    <br>
+    
     {{#each article}}
-    <div id = blogpost >
-    <h3> {{this.Title}} <h3>
-    <italic>{{this.Author}}</italic>
-
-    {{this.Description}}
-
-
+    <div id = "blogpost">
+    <h4 style="color:#003b47;border-bottom: thin solid #003b47;"> {{this.Title}} </h4> <i style="font-size: 10px;float:right;padding-right: 1em;"> {{this.Author}}</i>
+    <br>
+    <div class = "imgcontainer4"> </div>
+    <p style="padding-left: 1em;padding-top: .5em"> {{this.Description}}</p>
     </div>
+    <br>
     {{/each}}
-    -->
+
 
 
 </main>
