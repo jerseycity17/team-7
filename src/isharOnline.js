@@ -19,6 +19,20 @@ app.use(express.static(publicPath));
 app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({extended:false}));
 app.disable('x-powered-by');
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+	host : 'localhost',
+	user : 'root',
+	password : 'rootroot',
+	database : 'ISHAR'
+})
+
+connection.connect();
+
+connection.query('SELECT * FROM Meditation', function(error, results, fields) {
+	if (error) throw error;
+	console.log('Query Results:', results);
+});
 
 
 app.use(function(req, res, next) {
