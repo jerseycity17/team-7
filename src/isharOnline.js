@@ -34,11 +34,7 @@ function querySearch(word){
     if (error) throw error;
     // JSON parsed file
     return results;
-}
-    
-
-
-});
+});}
 
 app.use(function(req, res, next) {
     if(req.headers.hasOwnProperty('host')) {
