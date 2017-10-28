@@ -29,8 +29,10 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-function querySearch(word){
+function querySearch(word, author, pub){
    var query = "SELECT * FROM AyurMedi WHERE MATCH(title, author, abstract, manualTags, autoTags) AGAINST('"+word+"' IN NATURAL LANGUAGE MODE)";
+   if (author !== "") query += " AND AUTHOR = '" + author + "'";
+   if (pub !== "") query += " AND publicationYear = '" + pub + "'";
    console.log(query);
     connection.query(query, function(error, results, fields) {
     if (error) throw error;
@@ -74,17 +76,19 @@ app.get('/AdvancedSearch', function(req, res) {
 
 app.post('/AdvancedSearch', function(req, res) {
     console.log(req.query);
-    if(req.body.title !== ""){
+    if(req.body.title !== undefined){
 	console.log("title is running");
         let title = req.body.title;
         let author = req.body.author;
         let pubYear = req.body.pubYear;
 	console.log(req.body.title);
-	querySearch(req.body.title);
+	querySearch(req.body.title, req.body.author, req.body.pubYear);
     }
     else if(req.body.general !== ""){
 	console.log("general is running");
         let general = req.body.general;
+	querySearch(req.body.general, "", "");
+
     }
     console.log("this is searchResults: " + searchResults);
 	
