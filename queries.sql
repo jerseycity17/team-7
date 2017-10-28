@@ -71,7 +71,38 @@ CREATE TABLE Meditation (
    manualTags, autoTags);
    
    
-   Select * From Ayurveda;
-   Select * From Meditation;
-   
+   #Select * From Ayurveda;
+   #Select * From Meditation;
+  
+   create table AyurMedi as  
+   Select * From Ayurveda 
+   UNION ALL
+   select * From Meditation;
 
+   
+   SHOW TABLE STATUS;
+   ALTER TABLE Meditation ENGINE = MYISAM;
+   ALTER TABLE Ayurveda ENGINE = MYISAM;
+   ALTER TABLE AyurMedi ENGINE = MYISAM;
+  
+   CREATE FULLTEXT INDEX search
+   ON Meditation(title, author, abstract, manualTags, autoTags);
+   
+   CREATE FULLTEXT INDEX search
+   ON Ayurveda(title, author, abstract, manualTags, autoTags);
+   
+   CREATE FULLTEXT INDEX search
+   ON AyurMedi(title, author, abstract, manualTags, autoTags);
+   
+   
+   Select * From AyurMedi
+   WHERE MATCH(title, author, abstract, manualTags, autoTags)
+   AGAINST('back pain' IN NATURAL LANGUAGE MODE);
+   
+   Select * From Meditation
+   WHERE MATCH(title, author, abstract, manualTags, autoTags)
+   AGAINST('back pain' IN NATURAL LANGUAGE MODE);
+   
+   Select * From Ayurveda
+   WHERE MATCH(title, author, abstract, manualTags, autoTags)
+   AGAINST('back pain' IN NATURAL LANGUAGE MODE);
