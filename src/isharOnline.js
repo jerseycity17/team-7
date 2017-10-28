@@ -25,7 +25,7 @@ var connection = mysql.createConnection({
 	user : 'root',
 	password : 'rootroot',
 	database : 'ISHAR'
-})
+});
 
 connection.connect();
 
@@ -58,6 +58,10 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req, res) {
+    console.log(req.query);
+    let title = req.query["title"];
+    let author = req.query["author"];
+    let pubYear = req.query["pubYear"];
     res.redirect('/AdvancedSearch');
 });
 
@@ -67,6 +71,10 @@ app.get('/AdvancedSearch', function(req, res) {
 });
 
 app.post('/AdvancedSearch', function(req, res) {
+    console.log(req.query);
+    let title = req.query["title"];
+    let author = req.query["author"];
+    let pubYear = req.query["pubYear"];
     res.redirect('/AdvancedSearch');
 
 });
