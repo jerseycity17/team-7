@@ -20,7 +20,7 @@ connection.connect();
 connection.query('SELECT * FROM Meditiation', function(error, results, fields) {
 	if (error) throw error;
 	console.log('Query Results:', results);
-}
+});
 
 /**
  * Get port from environment and store in Express.
