@@ -2,24 +2,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require("path");
-const SolrNode = require('solr-node');
 
 // generate path from computer to folder
 let publicPath = path.resolve(__dirname, "public");
 let srcPath = path.resolve(__dirname);
 
-// create connection to Solr database
-// var client = new SolrNode({
-//     host: '54.84.208.45',
-//     port: '8983',
-//     core: 'test',
-//     protocol: 'http',
-//     debugLevel: 'ERROR' // log4js debug level paramter
-// });
-
 // create app using express module
 const app = express();
 console.log('Creating express app...');
+
+let article = [{Title: "Testing", Author: "Joseph Young",  Description: "This is the description"},
+    {Title: "Testing", Author: "Joseph Young",  Description: "This is the description"}]
 
 // declare path, set up handlebards, use bodyparser to decode, and remove headers
 app.use(express.static(publicPath));
@@ -46,16 +39,21 @@ app.use(function(req, res, next) {
 });
 
 app.get('/', function(req, res) {
-    res.render('home');
+    res.render('home', {article: article});
 
 });
 
 app.post('/', function(req, res) {
-    res.redirect('/');
+    res.redirect('/AdvancedSearch');
 });
 
 app.get('/AdvancedSearch', function(req, res) {
     res.render('AdvancedSearch');
+
+});
+
+app.post('/AdvancedSearch', function(req, res) {
+    res.redirect('/AdvancedSearch');
 
 });
 
