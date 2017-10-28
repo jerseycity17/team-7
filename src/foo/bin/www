@@ -14,16 +14,15 @@ var connection = mysql.createConnection({
 	password : 'rootroot',
 	database : 'ISHAR'
 })
-var si = require('search-index');
 
 connection.connect();
 
-connection.query('SELECT * FROM Meditation', function(error, results, fields) {
+connection.query('SELECT * FROM Meditation WHERE MATCH(title, author, abstract, manualTags, autoTags) AGAINST("back pain" IN NATURAL LANGUAGE MODE)', function(error, results, fields) {
 	if (error) throw error;
 	console.log('Query Results:', results);
-}).stream().pipe(si.defaultPipeline()).pipe(si.add());
+})
 
-console.log('Hello here are search results' + si.search('meditation'));
+connection.end();
 
 
 /**

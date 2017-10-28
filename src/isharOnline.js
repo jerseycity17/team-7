@@ -13,7 +13,7 @@ console.log('Creating express app...');
 
 let article = [{Title: "Testing", Author: "Joseph Young",  Description: "This is the description"},
     {Title: "Testing", Author: "Joseph Young",  Description: "This is the description"}]
-
+let searchResults = [];
 // declare path, set up handlebards, use bodyparser to decode, and remove headers
 app.use(express.static(publicPath));
 app.set('view engine', 'hbs');
@@ -28,11 +28,17 @@ var connection = mysql.createConnection({
 }); 
 
 connection.connect();
+connection.query("SELECT * FROM Meditation WHERE MATCH(title, author, abstract, manualTags, autoTags) AGAINST('Back Pain' IN NATURAL LANGUAGE MODE)", function(error, results, fields){
+	if(error) throw error;
+	console.log('Query Results: ' + results);
+});
 
 function querySearch(word){
-    connection.query("SELECT * FROM Meditation WHERE MATCH(title, author, abstract, manualTags, autoTags) " + word + "('Adolescent' IN NATURAL LANGUAGE MODE)", function(error, results, fields) {
+   var query = 'SELECT * FROM Meditation WHERE MATCH(title, author, abstract, manualTags, autoTags) AGAINST("' + word + '" IN NATURAL LANGUAGE MODE)';
+    connection.query("SELECT * FROM Meditation WHERE MATCH(title, author, abstract, manualTags, autoTags) AGAINST('Back Pain' IN NATURAL LANGUAGE MODE)", function(error, results, fields) {
     if (error) throw error;
     // JSON parsed file
+    console.log(results);
     return results;
 });}
 
@@ -45,7 +51,6 @@ app.use(function(req, res, next) {
         res.render('400',{});
     }
 });
-
 app.use(function(req, res, next) {
     console.log(req.method + " " + req.path);
     console.log(req.body);
@@ -59,7 +64,7 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req, res) {
-    let searchResults = [];
+
     console.log(req.query);
     if(req.query["title"] !== ""){
         let title = req.query["title"];
@@ -76,12 +81,11 @@ app.post('/', function(req, res) {
 });
 
 app.get('/AdvancedSearch', function(req, res) {
-    res.render('AdvancedSearch');
-
+    res.render('AdvancedSearch', {searchResults: searchResults});
+    searchResults = [];
 });
 
 app.post('/AdvancedSearch', function(req, res) {
-    let searchResults = [];
     console.log(req.query);
     if(req.query["title"] !== ""){
         let title = req.query["title"];
