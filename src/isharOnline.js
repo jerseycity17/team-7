@@ -19,7 +19,7 @@ app.use(express.static(publicPath));
 app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({extended:false}));
 app.disable('x-powered-by');
-var mysql = require('mysql');
+/*var mysql = require('mysql');
 var connection = mysql.createConnection({
 	host : 'localhost',
 	user : 'root',
@@ -34,7 +34,7 @@ connection.query('SELECT * FROM Meditation', function(error, results, fields) {
 	console.log('Query Results:', results);
 });
 
-
+*/
 app.use(function(req, res, next) {
     if(req.headers.hasOwnProperty('host')) {
         next();
@@ -98,6 +98,13 @@ app.get('/Contact', function(req, res) {
     res.render('Contact');
 
 });
+
+app.get('/Journal', function(req, res) {
+    res.render('journal');
+
+});
+
+
 
 
 app.listen(3000);

@@ -7,7 +7,7 @@
     <style>
 
     #blogpost{
-        width: 600px;
+        width: 960px;
         height: 160px;
         border: 1px solid #6a85e8;
         border-radius: 25px;
@@ -20,9 +20,40 @@
     .jumbotron{
         background-image: url("img/background_image.jpg");
         background-position: center; 
+        font-family: 'Roboto';
 
 
     }
+    .imgcontainer{
+        width: 100px;
+        height: 100px;
+        background-image: url("img/img2.png");
+        margin-left: 1em;
+        margin-top: -1em;
+        float:left;
+        border: 1px solid #003b47;
+        border-radius: 5px; 
+    }
+    .imgcontainer2{
+        width: 100px;
+        height: 100px;
+        background-image: url("img/img1.png");
+        margin-left: 1em;
+        margin-top: -1em;
+        float:left;
+        border: 1px solid #003b47;
+        border-radius: 5px;
+    }  
+    .imgcontainer3{
+        width: 100px;
+        height: 100px;
+        background-image: url("img/img3.png");
+        margin-left: 1em;
+        margin-top: -1em;
+        float:left;
+        border: 1px solid #003b47;
+        border-radius: 5px;
+    }      
     </style>
 </head>
 
@@ -37,7 +68,7 @@
         <div class="container" style="margin-bottom:1em">
             <h1 class="display-3" style="text-align:center;color:black;margin-top: 1em;">ISHAR Online!</h1><br>
             <h2 class="display-5" style="text-align:center;color:black;">Advanced Search</h2><br><br>
-            <form method="POST" lass="form-inline " style='text-align:center;'>
+            <form method="POST" action="/AdvancedSearch/" class="form-inline " style='text-align:center;'>
                 <input class="form-control" type="text" name="pubYear" placeholder="Publication Year" aria-label="Search" >
                 <input class="form-control" type="text" name="author"placeholder="Author" aria-label="Search">
                 <input class="form-control" type="text" name="title"placeholder="Title" aria-label="Search">
@@ -55,26 +86,29 @@
     <div id = "filter">
     <p style="padding-left: 97em"> Sort by: </p>
 
-     <div></div> <button class="btn btn-default" style="float:right" type="submit">Category</button>
-     <div></div> <button class="btn btn-default" style="float:right" type="submit">Category</button>
-     <div></div> <button class="btn btn-default" style="float:right" type="submit">Category</button>
+     <form action=""><div></div> <button class="btn btn-default" style="float:right" type="submit">Date</button></form>
+     <div></div> <button class="btn btn-default" style="float:right" type="submit">Title</button>
+     <div></div> <button class="btn btn-default" style="float:right" type="submit">Desc.</button>
      </div>
     <div id = "blogpost">
-    <h4> Waking Up to an Invisible Epidemic </h4> <i style="font-size: 10px;float:right;padding-right: 1em;"> By Deepak Chopra, MD, William C Bushell, PhD, Ryan Castle, David Vago, PhD, Peder S. Olofsson, MD, PhD, Mark Lambert</i>
+    <h4 style="color:#003b47;border-bottom: thin solid #003b47;"> Waking Up to an Invisible Epidemic </h4> <i style="font-size: 10px;float:right;padding-right: 1em;"> By Deepak Chopra, MD, William C Bushell, PhD, Ryan Castle, David Vago, PhD, Peder S. Olofsson, MD, PhD, Mark Lambert</i>
     <br>
-    <p style="float:left;padding-left: 1em;">  Until very recently, it was fairly unthinkable that our own bodies pose a greater threat to health than any outside disease. Most people have never heard of one of the greatest plagues of the 21st century, because it is caused by one of the most subtle, complex reactions in the body. This plague is inflammation, which in medical terms is is the ultimate two-edged sword. </p>
+    <div class = "imgcontainer"> </div>
+    <p style="padding-left: 1em;padding-top: .5em">  Until very recently, it was fairly unthinkable that our own bodies pose a greater threat to health than any outside disease. Most people have never heard of one of the greatest plagues of the 21st century, because it is caused by one of the most subtle, complex reactions in the body. This plague is inflammation, which in medical terms is is the ultimate two-edged sword. </p>
+    </div>
+    <br>
+    <div id = "blogpost">
+    <h4 style="color:#003b47;border-bottom: thin solid #003b47;"> Homeopathy </h4> 
+    <br>
+    <div class = "imgcontainer3"> </div>
+    <p style="padding-left: 1em;padding-top: .5em">  Homeopathy was created when Samuel Hahnemann was translating a medical treatise and became skeptical as to its claim that cinchona could cure malaria. Upon ingesting cinchona, Hahnemann experienced what he believed to be symptoms of malaria and came to believe that “like cures like.” Materials which cause symptoms in healthy people would cure them in sick people.</p>
     </div>
     <br>
         <div id = "blogpost">
-    <h4> Homeopathy </h4> 
+    <h4 style="color:#003b47;border-bottom: thin solid #003b47;"> ISHAR Profile: William Bushell, PhD </h4> 
     <br>
-    <p style="float:left;padding-left: 1em;">  Homeopathy was created when Samuel Hahnemann was translating a medical treatise and became skeptical as to its claim that cinchona could cure malaria. Upon ingesting cinchona, Hahnemann experienced what he believed to be symptoms of malaria and came to believe that “like cures like.” Materials which cause symptoms in healthy people would cure them in sick people.</p>
-    </div>
-    <br>
-        <div id = "blogpost">
-    <h4> ISHAR Profile: William Bushell, PhD </h4> 
-    <br>
-    <p style="float:left;padding-left: 1em;">  <u>William C. Bushell, PhD</u>, the Director of Research at ISHAR, has been researching mind-body phenomena for over three decades, focusing on the field of consciousness studies around the world as a biological, medical, and psychological anthropologist affiliated with Columbia, Harvard, and MIT.</p>
+    <div class = "imgcontainer2"> </div>
+    <p style="padding-left: 1em;padding-top: .5em">  <u>William C. Bushell, PhD</u>, the Director of Research at ISHAR, has been researching mind-body phenomena for over three decades, focusing on the field of consciousness studies around the world as a biological, medical, and psychological anthropologist affiliated with Columbia, Harvard, and MIT.</p>
     </div>
     <!--
     {{#each article}}
