@@ -8,7 +8,7 @@
 
     #blogpost{
         width: 600px;
-        height: 160px;
+        height: 200px;
         border: 1px solid #6a85e8;
         border-radius: 25px;
         text-align: center;
@@ -17,13 +17,12 @@
     .jumbotron{
         background-image: url("img/background_image.jpg");
         background-position: center;
-        height: 30em;
 
 
     }
     #wallpost{
         width: 960px;
-        height: 160px;
+        height: 200px;
         border: 1px solid #6a85e8;
         border-radius: 25px;
         text-align: center;
@@ -58,24 +57,27 @@
                 <input class="form-control" type="text" name="author"placeholder="Author" aria-label="Search">
                 <input class="form-control" type="text" name="title"placeholder="Title" aria-label="Search">
                <div style="padding-right:17em"></div> <button class="btn btn-default" style="right:50px" method="POST" type="submit">Search</button>
+            <br><br><br>
             </form>
             <br>
             <br>
         </div>
         <br>
     </div>
-        <h2> Sample Search </h2>
-    Sort by:
+        <h2 style="text-align: center;"> Filter Search</h2>
+    <div style="float:right;">Sort by:
     <form action = "" method="POST">
     <input type="radio" name="value" value="Date">Date <br>
     <input type="radio" name="value" value="Date">Title <br>
     <input type="radio" name="value" value="Date">Tag <br>
     </form>
+    </div>
 
 
     {{#each searchResults}}
     <div id = "blogpost">
-    <h4 style="color:#003b47;border-bottom: thin solid #003b47;"> {{this.title}} </h4> <i style="font-size: 10px;float:right;padding-right: 1em;"> {{this.author}}</i>
+    <h4 style="color:#003b47;border-bottom: thin solid #003b47;"> {{this.title}} </h4> <i style="font-size: 10px;float:right;padding-right: 1em; "> {{this.author}}</i>
+    <br>
     <br>
     <div class = "imgcontainer4"> </div>
     <p style="padding-left: 1em;padding-top: .5em"> {{this.abstract}}</p>

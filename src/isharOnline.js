@@ -20,6 +20,7 @@ app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({extended:false}));
 app.disable('x-powered-by');
 var mysql = require('mysql');
+/*
 var connection = mysql.createConnection({
         host : 'localhost',
         user : 'root',
@@ -41,7 +42,7 @@ function querySearch(word, author, pub){
 
     searchResults = results;
 });}
-
+*/
 app.use(function(req, res, next) {
     if(req.headers.hasOwnProperty('host')) {
         next();
