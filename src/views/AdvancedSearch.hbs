@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+
+
+<main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3" style="text-align:center;">Hello, world!</h1><br><br><br>
+            <h2 class="display-5" style="text-align:center;">Advanced Search</h2>
+            <form class="form-inline my-2 my-lg-0 centered">
+                <input class="form-control mr-sm-2" type="text" placeholder="Publication Year" aria-label="Search">
+                <input class="form-control mr-sm-2" type="text" placeholder="Author" aria-label="Search">
+                <input class="form-control mr-sm-2" type="text" placeholder="Title" aria-label="Search">
+
+                <br>
+                <br>
+                <br>
+               <div style="padding-right:260px"></div> <button class="btn btn-outline-success my-2 my-sm-0" style="right:50px" type="submit">Search</button>
+            </form>
+            <br>
+            <br>
+        </div>
+        <br>
+    </div>
+    {{#each article}}
+    <div id = blogpost >
+    <h3> {{this.Title}} <h3>
+    <italic>{{this.Author}}</italic>
+
+    {{this.Description}}
+
+
+    </div>
+    {{/each}}
+
+
+</main>
+
+
+</body>
+</html>
