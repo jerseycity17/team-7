@@ -8,7 +8,7 @@
 
     #blogpost{
         width: 600px;
-        height: 200px;
+        height: 160px;
         border: 1px solid #6a85e8;
         border-radius: 25px;
         text-align: center;
@@ -38,14 +38,14 @@
             <h1 class="display-3" style="text-align:center;color:black;margin-top: 1em;">Hello, world!</h1><br>
             <h2 class="display-5" style="text-align:center;color:black;">Advanced Search</h2><br><br>
             <form class="form-inline " style='text-align:center;'>
-                <input class="form-control" type="text" placeholder="Publication Year" aria-label="Search" >
-                <input class="form-control" type="text" placeholder="Author" aria-label="Search">
-                <input class="form-control" type="text" placeholder="Title" aria-label="Search">
+                <input class="form-control" type="text" name="pubYear" placeholder="Publication Year" aria-label="Search" >
+                <input class="form-control" type="text" name="author"placeholder="Author" aria-label="Search">
+                <input class="form-control" type="text" name="title"placeholder="Title" aria-label="Search">
                 
                 <br>
                 <br>
                 <br>
-               <div style="padding-right:17em"></div> <button class="btn btn-default" style="right:50px" type="submit">Search</button>
+               <div style="padding-right:17em"></div> <button class="btn btn-default" style="right:50px" method="POST" type="submit">Search</button>
             </form>
             <br>
             <br>
@@ -60,9 +60,21 @@
      <div></div> <button class="btn btn-default" style="float:right" type="submit">Category</button>
      </div>
     <div id = "blogpost">
-    <h4> Waking Up to an Invisible Epidemic </h4> <i style="font-size: 11px;float:right;padding-right: 1em;"> By Deepak Chopra, MD, William C Bushell, PhD, Ryan Castle, David Vago, PhD, Peder S. Olofsson, MD, PhD, Mark Lambert</i>
+    <h4> Waking Up to an Invisible Epidemic </h4> <i style="font-size: 10px;float:right;padding-right: 1em;"> By Deepak Chopra, MD, William C Bushell, PhD, Ryan Castle, David Vago, PhD, Peder S. Olofsson, MD, PhD, Mark Lambert</i>
     <br>
     <p style="float:left;padding-left: 1em;">  Until very recently, it was fairly unthinkable that our own bodies pose a greater threat to health than any outside disease. Most people have never heard of one of the greatest plagues of the 21st century, because it is caused by one of the most subtle, complex reactions in the body. This plague is inflammation, which in medical terms is is the ultimate two-edged sword. </p>
+    </div>
+    <br>
+        <div id = "blogpost">
+    <h4> Homeopathy </h4> 
+    <br>
+    <p style="float:left;padding-left: 1em;">  Homeopathy was created when Samuel Hahnemann was translating a medical treatise and became skeptical as to its claim that cinchona could cure malaria. Upon ingesting cinchona, Hahnemann experienced what he believed to be symptoms of malaria and came to believe that “like cures like.” Materials which cause symptoms in healthy people would cure them in sick people.</p>
+    </div>
+    <br>
+        <div id = "blogpost">
+    <h4> ISHAR Profile: William Bushell, PhD </h4> 
+    <br>
+    <p style="float:left;padding-left: 1em;">  <u>William C. Bushell, PhD</u>, the Director of Research at ISHAR, has been researching mind-body phenomena for over three decades, focusing on the field of consciousness studies around the world as a biological, medical, and psychological anthropologist affiliated with Columbia, Harvard, and MIT.</p>
     </div>
     <!--
     {{#each article}}
