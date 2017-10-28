@@ -19,22 +19,23 @@ app.use(express.static(publicPath));
 app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({extended:false}));
 app.disable('x-powered-by');
-/*var mysql = require('mysql');
+var mysql = require('mysql');
 var connection = mysql.createConnection({
-	host : 'localhost',
-	user : 'root',
-	password : 'rootroot',
-	database : 'ISHAR'
-});
+        host : 'localhost',
+        user : 'root',
+        password : 'rootroot',
+        database : 'ISHAR'
+}); 
 
 connection.connect();
 
-connection.query('SELECT * FROM Meditation', function(error, results, fields) {
-	if (error) throw error;
-	console.log('Query Results:', results);
-});
+function querySearch(word){
+    connection.query("SELECT * FROM Meditation WHERE MATCH(title, author, abstract, manualTags, autoTags) " + word + "('Adolescent' IN NATURAL LANGUAGE MODE)", function(error, results, fields) {
+    if (error) throw error;
+    // JSON parsed file
+    return results;
+});}
 
-*/
 app.use(function(req, res, next) {
     if(req.headers.hasOwnProperty('host')) {
         next();
@@ -58,10 +59,19 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req, res) {
+    let searchResults = [];
     console.log(req.query);
-    let title = req.query["title"];
-    let author = req.query["author"];
-    let pubYear = req.query["pubYear"];
+    if(req.query["title"] !== ""){
+        let title = req.query["title"];
+        let author = req.query["author"];
+        let pubYear = req.query["pubYear"];
+        searchResults = querySearch(title);
+    }
+    if(req.query["general"] !== ""){
+        let general = req.query["general"];
+        searchResults = querySearch(general);
+    }
+    console.log(searchResults);
     res.redirect('/AdvancedSearch');
 });
 
@@ -71,16 +81,33 @@ app.get('/AdvancedSearch', function(req, res) {
 });
 
 app.post('/AdvancedSearch', function(req, res) {
+    let searchResults = [];
     console.log(req.query);
-    let title = req.query["title"];
-    let author = req.query["author"];
-    let pubYear = req.query["pubYear"];
+    if(req.query["title"] !== ""){
+        let title = req.query["title"];
+        let author = req.query["author"];
+        let pubYear = req.query["pubYear"];
+        searchResults = querySearch(title);
+    }
+    if(req.query["general"] !== ""){
+        let general = req.query["general"];
+        searchResults = querySearch(general);
+    }
+    console.log(searchResults);
+
     res.redirect('/AdvancedSearch');
 
 });
 
 app.get('/IntHealth', function(req, res) {
     res.render('IntHealth');
+
+});
+
+app.post('/IntHealth', function(req, res) {
+    if(req.query.hasOwnProperty("general")){
+        let general = req.query["general"];
+    }
 
 });
 
