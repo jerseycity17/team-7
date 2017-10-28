@@ -89,6 +89,7 @@ app.post('/AdvancedSearch', function(req, res) {
         let title = req.query["title"];
         let author = req.query["author"];
         let pubYear = req.query["pubYear"];
+        searchResults = querySearch(title);
     }
     if(req.query.hasOwnProperty("general")){
         let general = req.query["general"];
