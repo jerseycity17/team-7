@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf5e6fcb-0967-487d-b827-2b7770c79b0d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/public/img/columbia_university-220x220.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/public/img/fom-341x60.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/public/img/indic_sciences-339x44.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/public/img/karolinska-207x248.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/public/img/parliament-298x283.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/public/img/tibet_house-204x211.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/public/img/ucsd-228x137.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/isharOnline.js" afterPath="$PROJECT_DIR$/src/isharOnline.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Contact.hbs" afterPath="$PROJECT_DIR$/src/views/Contact.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/IntHealth.hbs" afterPath="$PROJECT_DIR$/src/views/IntHealth.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/about.hbs" afterPath="$PROJECT_DIR$/src/views/about.hbs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,12 +17,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="isharOnline.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="isharOnline.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/isharOnline.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="62" column="3" lean-forward="true" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+            <state relative-caret-position="132">
+              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/layout.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="33" column="74" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntHealth.hbs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/IntHealth.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+              <folding>
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,9 +90,9 @@
         <option value="$PROJECT_DIR$/src/isharOnline.js" />
         <option value="$PROJECT_DIR$/src/views/About.hbs" />
         <option value="$PROJECT_DIR$/src/views/Contact.hbs" />
-        <option value="$PROJECT_DIR$/src/views/IntHealth.hbs" />
         <option value="$PROJECT_DIR$/src/views/layout.hbs" />
         <option value="$PROJECT_DIR$/src/views/Home.hbs" />
+        <option value="$PROJECT_DIR$/src/views/IntHealth.hbs" />
       </list>
     </option>
   </component>
@@ -96,8 +108,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="96" />
-    <option name="y" value="29" />
+    <option name="x" value="48" />
+    <option name="y" value="33" />
     <option name="width" value="1344" />
     <option name="height" value="814" />
   </component>
@@ -191,25 +203,25 @@
       <option name="presentableId" value="Default" />
       <updated>1509147068674</updated>
       <workItem from="1509147069856" duration="9725000" />
-      <workItem from="1509170180437" duration="15000" />
+      <workItem from="1509170180437" duration="829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9746000" />
+    <option name="totallyTimeSpent" value="10560000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="96" y="29" width="1344" height="814" extended-state="0" />
+    <frame x="48" y="33" width="1344" height="814" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494331" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32808024" sideWeight="0.49130765" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.4882842" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32808024" sideWeight="0.5086924" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494331" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.51171577" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39971346" sideWeight="0.4973545" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -489,14 +501,6 @@
     <entry file="file://$PROJECT_DIR$/src/About.html" />
     <entry file="file://$PROJECT_DIR$/src/Contact.html" />
     <entry file="file://$PROJECT_DIR$/src/IntHealth.html" />
-    <entry file="file://$PROJECT_DIR$/src/views/IntHealth.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Contact.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -513,13 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/layout.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/home.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -530,9 +527,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/isharOnline.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="62" column="3" lean-forward="true" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+        <state relative-caret-position="132">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/layout.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="33" column="74" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/IntHealth.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
