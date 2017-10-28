@@ -29,6 +29,7 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
+// Query MySQL database using parameters given in search box 
 function querySearch(word, author, pub){
    var query = "SELECT * FROM AyurMedi WHERE MATCH(title, author, abstract, manualTags, autoTags) AGAINST('"+word+"' IN NATURAL LANGUAGE MODE)";
    if (author !== "") query += " AND AUTHOR = '" + author + "'";
