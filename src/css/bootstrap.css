@@ -3575,6 +3575,10 @@ tbody.collapse.show {
   text-align: center;
 }
 
+.nav-item .right {
+    text-align: right;
+}
+
 .nav-justified .nav-item {
   -ms-flex-preferred-size: 0;
       flex-basis: 0;
@@ -3592,7 +3596,7 @@ tbody.collapse.show {
 }
 
 .navbar {
-  position: relative;
+  position: fixed;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
