@@ -59,17 +59,19 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req, res) {
+    let searchResults = [];
     console.log(req.query);
-    console.log(req.query);
-    if(req.query.hasOwnProperty("title")){
+    if(req.query["title"] !== ""){
         let title = req.query["title"];
         let author = req.query["author"];
         let pubYear = req.query["pubYear"];
+        searchResults = querySearch(title);
     }
-    if(req.query.hasOwnProperty("general")){
+    if(req.query["general"] !== ""){
         let general = req.query["general"];
-
+        searchResults = querySearch(general);
     }
+    console.log(searchResults);
     res.redirect('/AdvancedSearch');
 });
 
@@ -81,13 +83,13 @@ app.get('/AdvancedSearch', function(req, res) {
 app.post('/AdvancedSearch', function(req, res) {
     let searchResults = [];
     console.log(req.query);
-    if(req.query.hasOwnProperty("title")){
+    if(req.query["title"] !== ""){
         let title = req.query["title"];
         let author = req.query["author"];
         let pubYear = req.query["pubYear"];
         searchResults = querySearch(title);
     }
-    if(req.query.hasOwnProperty("general")){
+    if(req.query["general"] !== ""){
         let general = req.query["general"];
         searchResults = querySearch(general);
     }
