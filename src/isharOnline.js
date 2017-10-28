@@ -34,8 +34,9 @@ connection.query("SELECT * FROM Meditation WHERE MATCH(title, author, abstract, 
 });
 
 function querySearch(word){
-   var query = 'SELECT * FROM Meditation WHERE MATCH(title, author, abstract, manualTags, autoTags) AGAINST("' + word + '" IN NATURAL LANGUAGE MODE)';
-    connection.query("SELECT * FROM Meditation WHERE MATCH(title, author, abstract, manualTags, autoTags) AGAINST('Back Pain' IN NATURAL LANGUAGE MODE)", function(error, results, fields) {
+   var query = "SELECT * FROM Meditation WHERE MATCH(title, author, abstract, manualTags, autoTags) AGAINST('"+word+"' IN NATURAL LANGUAGE MODE)";
+   console.log(query);
+    connection.query(query, function(error, results, fields) {
     if (error) throw error;
     // JSON parsed file
     console.log(results);
@@ -65,18 +66,7 @@ app.get('/', function(req, res) {
 
 app.post('/', function(req, res) {
 
-    console.log(req.query);
-    if(req.query["title"] !== ""){
-        let title = req.query["title"];
-        let author = req.query["author"];
-        let pubYear = req.query["pubYear"];
-        searchResults = querySearch(title);
-    }
-    if(req.query["general"] !== ""){
-        let general = req.query["general"];
-        searchResults = querySearch(general);
-    }
-    console.log(searchResults);
+   
     res.redirect('/AdvancedSearch');
 });
 
@@ -88,9 +78,10 @@ app.get('/AdvancedSearch', function(req, res) {
 app.post('/AdvancedSearch', function(req, res) {
     console.log(req.query);
     if(req.query["title"] !== ""){
-        let title = req.query["title"];
-        let author = req.query["author"];
-        let pubYear = req.query["pubYear"];
+        let title = req.body.title;
+        let author = req.body.author;
+        let pubYear = req.body.pubYear;
+	console.log(req.body.title);
         searchResults = querySearch(title);
     }
     if(req.query["general"] !== ""){
